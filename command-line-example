@@ -1,0 +1,9 @@
+instructions for running genelink by command line on mac:
+
+1) install matlab runtime 9.3 http://ssd.mathworks.com/supportfiles/downloads/R2018a/deployment_files/R2018a/installers/maci64/MCR_R2018a_maci64_installer.dmg.zip
+2) download run_genelink_commandline.sh
+3) download example excel file example.xls
+4) cd Downloads
+4) in terminal, type
+
+./run_genelink_commandline.sh /Applications/MATLAB/MATLAB_Runtime/v93 
