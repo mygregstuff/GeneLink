@@ -1,0 +1,10 @@
+function [m] = curvature(time,od)
+[time,i]=unique(time);
+od=od(i);
+k=max(od);
+midpoints=time(1:end-1)+diff(time);
+od_sp=spline(time,od,midpoints);
+u=diff(od)./diff(time)./od_sp;
+u_max=max(u);
+curve = @(m)sum((u_max*(1-(od_sp/k).^m)-u).^2); 
+m=fminsearch(curve,1);
